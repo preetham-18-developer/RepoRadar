@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>RepoRadar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 RepoRadar</h1>
+<p>Get the Top 5 Trending GitHub Repositories Every Morning</p>
+
+<!-- hidden iframe -->
+<iframe name="hiddenFrame" style="display:none;"></iframe>
+
+<form action="https://pritam0407.app.n8n.cloud/webhook/subscribe-github-digest"
+      method="POST"
+      target="hiddenFrame"
+      onsubmit="showMessage()">
+
+<input type="text" name="name" placeholder="Enter your name" required>
+
+<input type="email" name="email" placeholder="Enter your email" required>
+
+<button type="submit">Subscribe</button>
+
+</form>
+
+<p id="message"></p>
+
+</div>
+
+<script>
+function showMessage(){
+  document.getElementById("message").innerText =
+  "✅ Successfully subscribed!";
+}
+</script>
+
+</body>
+</html>
